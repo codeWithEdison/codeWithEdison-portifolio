@@ -1,0 +1,121 @@
+        /* Terminal Button */
+        @font-face {
+            font-family: 'CrackedFont', monospace;
+            src: url('path/to/Matrix-Regular.ttf'); /* Specify the correct path to the font file */
+            font-weight: normal;
+            font-style: normal;
+        }
+        .terminal-button {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Terminal Popup */
+        .terminal-popup {
+            font-family:cracked code;
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 0;
+            width: 400px;
+            height: 310px;
+            font-family: inconsolata;
+            background-color: #000;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /* Terminal Header */
+        .terminal-header {
+            background-color: #111;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .terminal-button-close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 1;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-weight: bolder; 
+        }
+        .terminal-button-close:hover{
+            background: red;
+        }
+
+        /* Terminal Content */
+        .terminal-content {
+            padding: 10px;
+            max-height: 230px;
+            overflow-y: scroll;
+            background-color: #000;
+        }
+
+        /* Terminal Input */
+        .terminal-input-container {
+            background-color: transparent;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-prompt {
+            color: #00ff00;
+            margin-right: 5px;
+        }
+
+        .terminal-input {
+            background-color: transparent;
+            color: #00ff00;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+
+        /* Terminal Output Styles */
+        .terminal-output {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        /* Command List Styles */
+        .terminal-content ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .terminal-content li {
+            padding: 5px 0;
+        }
+
+        /* Cursor Blinking Animation */
+        @keyframes cursor-blink {
+            0%, 100% {
+                border-right: 2px solid transparent;
+            }
+            50% {
+                border-right: 2px solid;
+            }
+        }
+
+        /* Apply cursor blink animation to the input */
+        .terminal-input:focus {
+            animation: cursor-blink 0.8s infinite;
+        }
